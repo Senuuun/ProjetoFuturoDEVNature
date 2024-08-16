@@ -74,5 +74,5 @@ Para mais informações ou dúvidas, entre em contato com o autor do projeto.
 ## Informações
 
 - **Criador**: Arthur Cechinel Nunes
-- **FuturoDEV [Nature]
-- **Módulo 2 - Projeto Avaliativo
+- FuturoDEV [Nature]
+- Módulo 2 - Projeto Avaliativo
