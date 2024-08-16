@@ -1,0 +1,20 @@
+/* src/pages/CadastroEditarArea.css */
+.cadastro-editar-area {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.cadastro-editar-area h2 {
+    margin-bottom: 1.5rem;
+}
+
+.cadastro-editar-area form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-editar-area .MuiTextField-root,
+.cadastro-editar-area .MuiFormControl-root {
+    margin-bottom: 1rem;
+}

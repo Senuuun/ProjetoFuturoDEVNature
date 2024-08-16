@@ -1,0 +1,32 @@
+/* src/pages/Register.css */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.register-container .MuiTextField-root {
+    margin-bottom: 1rem;
+}
+
+.register-container .MuiButton-root {
+    margin-top: 1rem;
+}

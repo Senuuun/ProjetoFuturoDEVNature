@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Projeto de Áreas de Preservação
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web desenvolvida em React para o gerenciamento e visualização de áreas de preservação. O sistema permite o cadastro, listagem e edição de áreas, além de exibir essas áreas em um mapa interativo.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- **React**: Biblioteca para construção da interface de usuário.
+- **React Router**: Gerenciamento de rotas para navegação entre as páginas.
+- **Leaflet**: Biblioteca para exibição de mapas.
+- **Material-UI**: Biblioteca de componentes de interface de usuário.
+- **LocalStorage**: Armazenamento local para persistência de dados sem backend.
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Cadastro de Áreas**: Permite ao usuário cadastrar novas áreas de preservação com informações como nome, descrição, e coordenadas geográficas.
+2. **Edição de Áreas**: Permite editar áreas existentes.
+3. **Listagem de Áreas**: Exibe uma lista de todas as áreas cadastradas com a opção de editar cada uma.
+4. **Mapa de Áreas**: Mostra as áreas cadastradas em um mapa interativo com marcadores personalizados.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalação e Execução
 
-### `npm test`
+Para executar o projeto localmente, siga os passos abaixo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pré-requisitos
 
-### `npm run build`
+- **Node.js**: Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixar o instalador em [nodejs.org](https://nodejs.org/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Passos para Execução
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone o Repositório**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/Senuuun/ProjetoFuturoDEVNature.git
+    ```
 
-### `npm run eject`
+2. **Instale as Dependências**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Navegue até o diretório do projeto e instale as dependências necessárias:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    cd meu-projeto
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Inicie o Servidor de Desenvolvimento**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Após instalar as dependências, inicie o servidor de desenvolvimento:
 
-## Learn More
+    ```bash
+    npm start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    O projeto estará disponível em [http://localhost:3000](http://localhost:3000).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Estrutura do Projeto
 
-### Code Splitting
+- **`src/`**: Contém o código-fonte da aplicação.
+  - **`components/`**: Componentes reutilizáveis, como `Map.js` e `Menu.js`.
+  - **`pages/`**: Páginas da aplicação, como `Dashboard.js`, `ListagemAreas.js`, e `CadastroEditarArea.js`.
+  - **`App.js`**: Configuração das rotas da aplicação.
+  - **`index.js`**: Ponto de entrada da aplicação.
+- **`public/`**: Arquivos estáticos e o `index.html`.
+- **`README.md`**: Este arquivo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contribuição
 
-### Analyzing the Bundle Size
+Sinta-se à vontade para contribuir com melhorias ou correções. Faça um fork do projeto, crie uma branch para suas alterações e envie um pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+Para mais informações ou dúvidas, entre em contato com o autor do projeto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Informações
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Criador: Arthur Cechinel Nunes
+FuturoDEV [Nature]
+Módulo 2 - Projeto Avaliativo

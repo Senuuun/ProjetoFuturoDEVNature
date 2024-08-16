@@ -1,0 +1,12 @@
+/* src/pages/ListagemAreas.css */
+.listagem-areas {
+    padding: 2rem;
+}
+
+.listagem-areas h2 {
+    margin-bottom: 1.5rem;
+}
+
+.listagem-areas .MuiButton-root {
+    margin-bottom: 1rem;
+}

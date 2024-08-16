@@ -1,0 +1,66 @@
+/* src/pages/Login.css */
+.login-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não saia do contêiner */
+}
+
+.login-image img {
+    width: 100%; /* Faz com que a imagem cubra toda a largura do contêiner */
+    height: 100%; /* Faz com que a imagem cubra toda a altura do contêiner */
+    object-fit: cover; /* Mantém a proporção da imagem e cobre o contêiner */
+    object-position: center; /* Centraliza a imagem no contêiner */
+}
+
+.login-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    background: white;
+    padding: 2rem;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    margin-bottom: 1.5rem;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form .MuiTextField-root {
+    margin-bottom: 1rem;
+}
+
+.login-form .MuiButton-root {
+    margin-top: 1rem;
+}
+
+.signup-link {
+    margin-top: 1rem;
+}
+
+.signup-link p {
+    margin: 0;
+}
+
+.signup-link a {
+    color: #1976d2; /* Cor padrão do link */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
