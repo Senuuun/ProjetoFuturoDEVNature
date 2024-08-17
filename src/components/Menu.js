@@ -1,12 +1,11 @@
 // src/components/Menu.js
 import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Menu, MenuItem, IconButton } from '@mui/material';
 
 const MenuComponent = () => {
     const [anchorEl, setAnchorEl] = useState(null);
-    const location = useLocation();
     const navigate = useNavigate();
     const open = Boolean(anchorEl);
 
@@ -24,7 +23,8 @@ const MenuComponent = () => {
         navigate('/');
     };
 
-    const isAuthenticated = location.pathname !== '/' && location.pathname !== '/register';
+    // Verifica se o usuário está autenticado
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
 
     return (
         <div style={{ position: 'absolute', top: 10, right: 10 }}>
@@ -37,30 +37,30 @@ const MenuComponent = () => {
                 open={open}
                 onClose={handleClose}
             >
-                {!isAuthenticated ? (
-                    <>
-                        <MenuItem component={Link} to="/" onClick={handleClose}>
-                            Login
-                        </MenuItem>
-                        <MenuItem component={Link} to="/register" onClick={handleClose}>
-                            Register
-                        </MenuItem>
-                    </>
-                ) : (
-                    <>
-                        <MenuItem component={Link} to="/dashboard" onClick={handleClose}>
+                {isAuthenticated ? (
+                    [
+                        <MenuItem key="dashboard" component={Link} to="/dashboard" onClick={handleClose}>
                             Dashboard
-                        </MenuItem>
-                        <MenuItem component={Link} to="/register-area" onClick={handleClose}>
+                        </MenuItem>,
+                        <MenuItem key="register-area" component={Link} to="/register-area" onClick={handleClose}>
                             Cadastrar Área
-                        </MenuItem>
-                        <MenuItem component={Link} to="/listagem-areas" onClick={handleClose}>
+                        </MenuItem>,
+                        <MenuItem key="listagem-areas" component={Link} to="/listagem-areas" onClick={handleClose}>
                             Listar Áreas
-                        </MenuItem>
-                        <MenuItem onClick={handleLogout}>
+                        </MenuItem>,
+                        <MenuItem key="logout" onClick={handleLogout}>
                             Logout
                         </MenuItem>
-                    </>
+                    ]
+                ) : (
+                    [
+                        <MenuItem key="login" component={Link} to="/" onClick={handleClose}>
+                            Login
+                        </MenuItem>,
+                        <MenuItem key="register" component={Link} to="/register" onClick={handleClose}>
+                            Register
+                        </MenuItem>
+                    ]
                 )}
             </Menu>
         </div>
@@ -68,3 +68,4 @@ const MenuComponent = () => {
 };
 
 export default MenuComponent;
+

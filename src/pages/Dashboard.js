@@ -48,7 +48,9 @@ const Dashboard = () => {
                     <Card>
                         <CardContent>
                             <Typography variant="h6">Mapa de Áreas</Typography>
-                            <Map /> {/* Componente do Mapa */}
+                            <div style={{ height: '400px', width: '100%' }}>
+                                <Map /> {/* Componente do Mapa */}
+                            </div>
                         </CardContent>
                     </Card>
                 </Grid>

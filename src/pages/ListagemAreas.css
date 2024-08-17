@@ -10,3 +10,16 @@
 .listagem-areas .MuiButton-root {
     margin-bottom: 1rem;
 }
+
+.MuiPaper-root {
+    margin-top: 20px;
+}
+
+.MuiListItemSecondaryAction-root {
+    display: flex;
+    align-items: center;
+}
+
+.MuiTypography-body2 {
+    margin-right: 15px;
+}

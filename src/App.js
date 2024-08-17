@@ -7,6 +7,7 @@ import Register from './pages/Register';
 import PrivateRoute from './components/PrivateRoute';
 import ListagemAreas from './pages/ListagemAreas';
 import CadastroEditarArea from './pages/CadastroEditarArea';
+import EditArea from './pages/EditArea'; // Importe o componente EditArea
 
 // Função para inicializar o localStorage com áreas pré-definidas
 const initializeLocalStorage = () => {
@@ -15,14 +16,14 @@ const initializeLocalStorage = () => {
             id: '1',
             nome: 'Área de Paris',
             position: [48.8566, 2.3522],
-            descricao: 'Área localizada em Paris, França',
+            descricao: 'Área localizada em Paris, França, com rica biodiversidade e importante valor ecológico.',
             peopleCount: 10
         },
         {
             id: '2',
             nome: 'Área de Lyon',
             position: [45.75, 4.85],
-            descricao: 'Área localizada em Lyon, França',
+            descricao: 'Área localizada em Lyon, França, conhecida por suas práticas de preservação e áreas verdes urbanas.',
             peopleCount: 5
         }
     ];
@@ -59,10 +60,18 @@ function App() {
                     } 
                 />
                 <Route 
-                    path="/register-area/:id?" 
+                    path="/register-area" 
                     element={
                         <PrivateRoute>
                             <CadastroEditarArea />
+                        </PrivateRoute>
+                    } 
+                />
+                <Route 
+                    path="/edit-area/:id" 
+                    element={
+                        <PrivateRoute>
+                            <EditArea />
                         </PrivateRoute>
                     } 
                 />
